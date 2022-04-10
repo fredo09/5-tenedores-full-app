@@ -1,12 +1,15 @@
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Icon } from "react-native-elements";
 
-//Importando Screen
-import { RestaurantScreen } from "./../screens/Restaurant";
-import { FavoritosScreen } from "./../screens/Favoritos";
-import { SearchScreen } from "./../screens/Search";
-import { RankingScreen } from "./../screens/Ranking";
-import { AccountScreen } from "./../screens/Account";
+//Importando Screen stack
+import { RestaurantStack } from "./RestaurantStack";
+import { FavoritesStack } from "./FavoritosStack";
+import { RakingStack } from "./RakingStack";
+import { SearchStack } from "./SearchStack";
+import { AccountStack } from "./AccountStack";
+
+//Importando screen de forma mas simple
+import { Screen } from "./../utils/screensName";
 
 const Tab = createBottomTabNavigator();
 
@@ -16,39 +19,72 @@ export function AppNavigation() {
       screenOptions={({ route }) => ({
         tabBarActiveTintColor: "#00a680",
         tabBarInactiveTintColor: "#646464",
+        headerShown: false,
         tabBarIcon: ({ color, size }) =>
           screenOptionsTabsIcon(route, color, size),
       })}
     >
-      <Tab.Screen name="Restaurant" component={RestaurantScreen} />
-      <Tab.Screen name="Favoritos" component={FavoritosScreen} />
-      <Tab.Screen name="Buscador" component={SearchScreen} />
-      <Tab.Screen name="Ranking" component={RankingScreen} />
-      <Tab.Screen name="Cuenta" component={AccountScreen} />
+      <Tab.Screen
+        name={Screen.restaurant.tab}
+        component={RestaurantStack}
+        options={{
+          title: "Restaurants",
+        }}
+      />
+      <Tab.Screen
+        name={Screen.favorites.tab}
+        component={FavoritesStack}
+        options={{
+          title: "Favoritos",
+        }}
+      />
+      <Tab.Screen
+        name={Screen.search.tab}
+        component={SearchStack}
+        options={{
+          title: "Search",
+        }}
+      />
+      <Tab.Screen
+        name={Screen.ranking.tab}
+        component={RakingStack}
+        options={{
+          title: "Rankings",
+        }}
+      />
+      <Tab.Screen
+        name={Screen.account.tab}
+        component={AccountStack}
+        options={{
+          title: "Account",
+        }}
+      />
     </Tab.Navigator>
   );
 }
 
 function screenOptionsTabsIcon(route, color, size) {
+  const { restaurant, search, favorites, ranking, account } = Screen;
+
   let iconName = "";
 
-  if (route.name === "Restaurant") {
+  if (route.name === restaurant.tab) {
     iconName = "compass-outline";
   }
 
-  if (route.name === "Favoritos") {
+  if (route.name === favorites.tab) {
     iconName = "heart-outline";
   }
 
-  if (route.name === "Buscador") {
+  if (route.name === search.tab) {
     iconName = "magnify";
   }
 
-  if (route.name === "Ranking") {
+  if (route.name === ranking.tab) {
     iconName = "star-outline";
   }
 
-  if (route.name === "Cuenta") {
+  if (route.name === account.tab) {
     iconName = "account";
   }
 
