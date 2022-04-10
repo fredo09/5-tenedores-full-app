@@ -1,0 +1,10 @@
+
+//Generando las rutas absolutas en la aplicación react-native
+/*{
+    "compilerOptions": {
+        "baseUrl": "src",
+        "target": "es6"
+    },
+    "include": ["src"],
+    "exclude": ["node_modules"]
+}/*
