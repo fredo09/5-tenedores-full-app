@@ -10,7 +10,7 @@ export const AccountStack = () => {
   return (
     <Stack.Navigator>
       <Stack.Screen
-        name={Screen.account.tab}
+        name={Screen.account.cuenta}
         component={AccountScreen}
         options={{
           title: "Mi Cuenta",
