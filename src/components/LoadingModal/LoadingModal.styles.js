@@ -18,6 +18,5 @@ export const styles = StyleSheet.create({
     color: "#00a680",
     textTransform: "uppercase",
     marginTop: 10,
-    º,
   },
 });

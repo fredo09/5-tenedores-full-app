@@ -1,10 +1,35 @@
-import { Text, View } from "react-native";
 import React from "react";
+import { useNavigation } from "@react-navigation/native";
+import { View, ScrollView } from "react-native";
+import { Text, Image } from "react-native-elements";
+
+import { styles } from "./LoginScreen.style";
+
+import { Screen } from "./../../../utils/screensName";
 
 export const LoginScreen = () => {
+  const navigation = useNavigation();
+
+  const goToRegister = () => {
+    navigation.navigate(Screen.account.registerUser);
+  };
+
   return (
-    <View>
-      <Text>Login</Text>
-    </View>
+    <ScrollView>
+      <Image
+        source={require("../../../../assets/img/5-tenedores-letras-icono-logo.png")}
+        style={styles.image}
+      />
+      <View style={styles.content}>
+        {/* <LoginForm /> */}
+
+        <Text style={styles.textRegister}>
+          ¿Aún no tienes cuenta{" "}
+          <Text style={styles.btnRegister} onPress={goToRegister}>
+            Regístrarse
+          </Text>
+        </Text>
+      </View>
+    </ScrollView>
   );
 };

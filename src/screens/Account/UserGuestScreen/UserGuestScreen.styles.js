@@ -1,15 +1,14 @@
 import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
-  containerView: {
-    marginLeft: 30,
-    marginRight: 30,
+  content: {
+    marginHorizontal: 30,
   },
   image: {
+    resizeMode: "contain",
     height: 300,
     width: "100%",
-    marginBottom: 30,
-    marginTop: 20,
+    marginBottom: 40,
   },
   title: {
     fontWeight: "bold",
@@ -21,14 +20,7 @@ export const styles = StyleSheet.create({
     textAlign: "center",
     marginBottom: 20,
   },
-  viewBtn: {
-    flex: 1,
-    alignItems: "center",
-  },
   btnStyle: {
     backgroundColor: "#00a680",
-  },
-  btnContainer: {
-    width: "70%",
   },
 });

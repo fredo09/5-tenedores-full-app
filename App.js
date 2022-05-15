@@ -3,7 +3,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { AppNavigation } from "./src/navigation";
 import { initFirebase } from "./src/utils/firebase";
 
-LogBox.ignoreLogs();
+//LogBox.ignoreLogs();
 
 export default function App() {
   return (

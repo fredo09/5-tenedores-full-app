@@ -8,14 +8,6 @@ export const styles = StyleSheet.create({
     marginTop: 20,
   },
   content: {
-    marginHorizontal: 60,
-  },
-  textRegister: {
-    marginTop: 15,
-    marginHorizontal: 10,
-  },
-  btnRegister: {
-    color: "#00a680",
-    fontWeight: "bold",
+    marginHorizontal: 40,
   },
 });

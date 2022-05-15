@@ -1,7 +1,7 @@
 /**Usuario invitado */
 
 import React from "react";
-import { View, ScrollView } from "react-native";
+import { ScrollView } from "react-native";
 import { Text, Button, Image } from "react-native-elements";
 import { useNavigation } from "@react-navigation/native";
 
@@ -12,39 +12,28 @@ import { styles } from "./UserGuestScreen.styles";
 export const UserGuestScreen = () => {
   const navigation = useNavigation();
 
-  return (
-    <View>
-      <Text>Usuario invitado</Text>
-    </View>
-  );
-  /*
   const goToLogin = () => {
     navigation.navigate(Screen.account.login);
-  };*/
-  /*
+  };
+
   return (
-    <ScrollView centerContent={true} style={styles.containerView}>
+    <ScrollView centerContent={true} style={styles.content}>
       <Image
-        source={require("./../../../../assets/img/user-guest.jpeg")}
+        source={require("../../../../assets/img/user-guest.jpeg")}
         style={styles.image}
       />
-
-      <Text style={styles.title}>Consultar tu perfil en 5Tenedores </Text>
-
+      <Text style={styles.title}>Consultar tu perfil de 5 Tenedores</Text>
       <Text style={styles.description}>
-        ¿Cómo describirías tu mejor Restaurante? Busca y encuentra los mejores
-        Restaurantes de una forma sencilla, vota por el que más te ha gustado y
-        comenta cual ha sido tu experiencia.
+        ¿Como describirías tu mejor restaurante? Busca y visualiza los mejores
+        restaurantes de una forma sencilla, vota cual te ha gustado más y
+        comenta como ha sito tu experiencia.
       </Text>
 
-      <View style={styles.viewBtn}>
-        <Button
-          buttonStyle={styles.btnStyle}
-          containerStyle={styles.btnContainer}
-          title={"Ver tu Perfil"}
-          onPress={goToLogin}
-        />
-      </View>
+      <Button
+        title="Ver tu perfil"
+        onPress={goToLogin}
+        buttonStyle={styles.btnStyle}
+      />
     </ScrollView>
-  );*/
+  );
 };
