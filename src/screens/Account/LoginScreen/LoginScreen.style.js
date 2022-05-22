@@ -11,8 +11,8 @@ export const styles = StyleSheet.create({
     marginHorizontal: 60,
   },
   textRegister: {
-    marginTop: 15,
-    marginHorizontal: 10,
+    marginTop: 20,
+    marginHorizontal: 40,
   },
   btnRegister: {
     color: "#00a680",

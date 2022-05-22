@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigation } from "@react-navigation/native";
+import { LoginForm } from "./../../../components/Autenticacion/LoginForm";
 import { View, ScrollView } from "react-native";
 import { Text, Image } from "react-native-elements";
 
@@ -22,7 +23,7 @@ export const LoginScreen = () => {
       />
       <View style={styles.content}>
         {/* <LoginForm /> */}
-
+        <LoginForm />
         <Text style={styles.textRegister}>
           ¿Aún no tienes cuenta{" "}
           <Text style={styles.btnRegister} onPress={goToRegister}>
